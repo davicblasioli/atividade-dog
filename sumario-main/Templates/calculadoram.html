@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Mililitros</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <section class="foto">
+            <br><br>
+            <h1 class="h1calc">Calculadora - Mililitros de Soro</h1>
+        </section>
+        <section class="texto ">
+            <br>
+            <h2>Qual a importância</h2>
+            <br><br>
+            <p>Calcular a quantidade adequada de soro para um animal 
+                é fundamental por diversos motivos essenciais para sua 
+                saúde e bem-estar. Primeiramente, o soro é uma fonte 
+                vital de hidratação e nutrientes essenciais, especialmente 
+                em situações de desidratação, doenças ou condições que 
+                requerem reposição rápida de fluidos. A quantidade precisa é 
+                crucial para evitar sobrecarga de líquidos, o que pode causar 
+                complicações graves, ou sub-hidratação, que pode levar a 
+                problemas de saúde adicionais. Além disso, a dosagem correta 
+                garante a administração adequada de eletrólitos, vitaminas e 
+                minerais, promovendo a recuperação eficaz do animal. Portanto, 
+                calcular com precisão a quantidade de soro é um aspecto vital 
+                do cuidado veterinário, contribuindo diretamente para a saúde 
+                e a qualidade de vida do animal.</p>
+            <br><br><br><br>
+            <div class="butca">
+                <h2 class="h2calc">Calculadora de Mililitros</h2>
+                <form action="/resultad" method="post">
+                    <div class="form-control">
+                        <input class="input input-alt" placeholder="Peso do animal(kg)" step="0.1" type="number" id="peso" name="peso">
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+                    
+                    <div class="form-control">
+                        <input class="input input-alt" placeholder="Grau de desidratação" step="0.01" name="desidratação">
+                        <span class="input-border input-border-alt"></span>
+                    </div><br><br>
+
+                    <button class="botcal" type="submit"><span>Calcular mililitros</span></button><br><br>
+
+                    <div class="resultado">{{resultado}}</div>
+                </form>
+            </div>
+        </section>
+        </center>
+    </main>
+
+</body>
+
+</html>

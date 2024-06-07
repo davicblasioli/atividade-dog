@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --fundo: #e8eaeb;
+    --título: #16567f;
+    --funcinza: #fafafa;
+    --botao: rgb(14, 102, 129);
+    --botasel: rgb(45, 170, 207);
+    --cabeca: #ffffff;
+    --rodape: #02321a;
+    --branco: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.h1calc{
+    color: var(--título);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    background-color: white;
+    margin: 210px;
+    margin-left: 250px;
+    margin-right: 250px;
+    background-size: 1px;
+}
+
+h2{
+  text-align: center;
+}
+
+.texto {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 15px;
+  background-color: var(--cabeca);
+  margin: 210px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-size: 1px;
+  font-size: large;
+}
+
+.botcal {
+    background-color: var(--botao);
+    color: var(--branco);
+    padding: 5px;
+    border-radius: 7px;
+    font-size: x-large;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.butca {
+    margin-left: 100px;
+    padding-left: 10px;
+    margin: 0 auto;
+    display: block;
+    font-size: large;
+    background-color: var(--cabeca);
+    border: none;
+    max-height: 1000px;
+    padding-bottom: 80px;
+    height: 250px;
+}
+
+.calc {
+    border-style: outset;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding-top: 40px;
+    background-color: var(--cabeca);
+    border-radius: 7px;
+    padding-bottom: 75px;
+}
+
+.resultado{
+  text-align: center;
+}
+
+
+
+
+.input {
+    color: black;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  .input:focus {
+    outline: none;
+  }
+
+  .input:focus + .input-border {
+    width: 100%;
+  }
+
+  .form-control {
+    position: relative;
+    --width-of-input: 300px;
+    margin: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .input-alt {
+    font-size: 1.2rem;
+    padding-inline: 1em;
+    padding-block: 0.8em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-border-alt {
+    height: 3px;
+    background: linear-gradient(100deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
+    transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+  }
+
+  .input-alt:focus + .input-border-alt {
+    width: 100%;
+  }
+
+
+
+
+
+  .botcal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--botao);
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .botcal:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: var(--botasel);
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+  }
+  
+  .botcal:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+  
+  .botcal span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .botcal:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(0.95);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
+
+
+  .inputbox {
+    position: relative;
+    width: 196px;
+  }
+  
+  .inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  
+  .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    letter-spacing: 00.05em;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  
+  .inputbox input:valid ~span,
+  .inputbox input:focus ~span {
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0,75em;
+  }
+  
+  .inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+  }
+  
+  .inputbox input:valid ~i,
+  .inputbox input:focus ~i {
+    height: 44px;
+  }
